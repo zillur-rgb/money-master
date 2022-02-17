@@ -15,8 +15,14 @@ const balance = document.getElementById('balance')
 
 
 function totalExpenses(a,b,c){
-    let total = parseFloat(a) + parseFloat(b) + parseFloat(c);
-    return total
+    
+    if( parseFloat(a)< 0 || parseFloat(b)< 0 || parseFloat(c)< 0 ){
+        console.log('you cannot enter negative value')
+    }
+    else{
+        let total = parseFloat(a) + parseFloat(b) + parseFloat(c);
+        return total;
+    }
 }
 
 document
