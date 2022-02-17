@@ -7,12 +7,12 @@ const food = document.getElementById("food-input");
 
 const rent = document.getElementById("rent-input");
 
-
 const clothes = document.getElementById("clothes-input");
-
-
 const expenses = document.getElementById("total-expense");
 const balance = document.getElementById('balance')
+
+
+
 
 function totalExpenses(a,b,c){
     let total = parseFloat(a) + parseFloat(b) + parseFloat(c);
@@ -30,8 +30,18 @@ document
   
  
    
-document.getElementById("save-button").addEventListener("click", function () {
-  console.log("save btn clicked");
-});
+document.getElementById('save-button').addEventListener('click',function(){
+    const saveInput = document.getElementById('save-input');
+    let saveInputValue = parseFloat(saveInput.value);
+    let savingAmount = document.getElementById('saving-amount');
+    savingAmount.innerText= parseFloat(inCome.value) * (saveInputValue / 100) 
+
+const reamainBalance = document.getElementById('remain-balance');
+reamainBalance.innerText =  balance.innerText - savingAmount.innerText;
+
+
+})
+
+
 
 
